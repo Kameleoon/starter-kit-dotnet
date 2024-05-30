@@ -15,7 +15,7 @@ This starter kit provides quickstart instructions for developers using the [Kame
 Make sure you have the following requirements before you get started:
 
 1. A Kameleoon user account. Visit [kameleoon.com](https://www.kameleoon.com/) to learn more.
-2. Have the .NET 7.0 installed (or later).
+2. Have the `.NET 7.0` (or later) installed.
 
 ### Get started
 
@@ -41,7 +41,28 @@ We're using `localhost` as `topLevelDomain` because server will be started local
 dotnet run
 ```
 
-### Available commands
+### Basic Usage
+
+> Here is a list of typical ways clients use our SDK:
+
+1. Add targeting add and retrieve a variation key for a visitor:
+```
+http://localhost:4300/Basic?index=<index>&value=<value>&featureKey=<featureKey>
+```
+
+2. Fetch remote data for a visitor and get variable value for the assigned variation.
+```
+http://localhost:4300/Remote?featureKey=<featureKey>&variableKey=<variableKey>
+```
+
+3. Get all feature flags and check if they are active for a visitor or not.
+```
+http://localhost:4300/AllFlags
+```
+
+### Specific Usage
+
+> The SDK methods are divided into separate calls for easier understanding and testing if necessary.
 
 1. Get list of available feature flag's keys:
 ```
