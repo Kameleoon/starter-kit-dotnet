@@ -12,7 +12,7 @@ builder.Services.AddSwaggerGen();
 // Kameleoon Integration
 try
 {
-    // for tests we're using 'localhost', but on real website you need to set your top level domain, e.g ".example.com"
+    // For testing, we're using 'localhost', but on real website you would set your top level domain. For example, ".example.com"
     var config = new KameleoonClientConfig("clientId", "clientSecret", topLevelDomain: "localhost");
     var client = KameleoonClientFactory.Create("siteCode", config);
     await client.WaitInit();
